@@ -24,7 +24,7 @@ A project where developers can share their code,knowledge and experiences.
 
 👉 Copy to Clipboard: Implement a convenient "Copy to Clipboard" functionality for users to easily copy the code for their use.
 
-👉 Search Prompts by Specific Tag: Allow users to search for posts based on specific tags, making it easier to find posts related to specific topics.
+👉 Search Posts by Specific Tag: Allow users to search for posts based on specific tags, making it easier to find posts related to specific topics.
 
 👉 Google Authentication using NextAuth: Enable secure Google authentication using NextAuth, ensuring a streamlined and trustworthy login experience.
 
