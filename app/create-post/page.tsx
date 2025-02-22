@@ -21,7 +21,7 @@ const CreatePrompt: FC = () => {
     setSubmitting(true);
 
     try {
-      const response = await fetch("/api/prompt/new", {
+      const response = await fetch("/api/post/new", {
         method: "POST",
         body: JSON.stringify({
           prompt: post.prompt,
