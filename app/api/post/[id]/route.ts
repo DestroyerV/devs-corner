@@ -28,14 +28,16 @@ export const GET = async (
 
 export const PATCH = async (
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }>  }
 ) => {
   const { prompt, tag } = await req.json();
 
   try {
     await connectToDB();
 
-    const existingPrompt = await Prompt.findById(params.id);
+    const id = (await params).id;
+
+    const existingPrompt = await Prompt.findById(id);
 
     if (!existingPrompt) {
       return new Response(JSON.stringify({ error: "Prompt not found" }), {
@@ -58,12 +60,14 @@ export const PATCH = async (
 
 export const DELETE = async (
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }>  }
 ) => {
   try {
     await connectToDB();
 
-    await Prompt.findByIdAndDelete(params.id);
+    const id = (await params).id;
+
+    await Prompt.findByIdAndDelete(id);
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
