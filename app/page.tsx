@@ -6,7 +6,7 @@ const Home = () => {
       <div className='head_text text-center  '>
         Discover & Share Your
         <br />
-        <span className=' inline-flex flex-col h-[calc(theme(fontSize.5xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))] overflow-hidden'>
+        <span className=' inline-flex flex-col h-[calc(var(--text-5xl)*(var(--leading-tight)))] md:h-[calc(var(--text-6xl)*(var(--leading-tight)))] overflow-hidden'>
           <ul className=' orange_gradient block animate-text-slide-5 text-center leading-tight [&_li]:block'>
             <li>Code</li>
             <li>Tips</li>
