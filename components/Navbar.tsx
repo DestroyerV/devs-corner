@@ -96,14 +96,14 @@ const Navbar = () => {
                   My Profile
                 </Link>
                 <Link
-                  href='/create-prompt'
+                  href='/create-post'
                   className='dropdown_link'
                   onClick={() => setToggleDropdown(false)}>
-                  Create Prompt
+                  Create Post
                 </Link>
                 <button
                   type='button'
-                  className='mt-5 w-full black_btn'
+                  className='mt-3 w-full black_btn'
                   onClick={() => {
                     setToggleDropdown(false);
                     signOut();
