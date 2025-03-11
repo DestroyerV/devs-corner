@@ -17,7 +17,7 @@ const Form: FC<FormProps> = ({
       </h1>
 
       <p className='desc text-left max-w-md'>
-        {type} and share amazing your amazing ideas.
+        {type} and share your amazing ideas.
       </p>
 
       <form
@@ -29,8 +29,8 @@ const Form: FC<FormProps> = ({
           </span>
 
           <textarea
-            value={post.prompt}
-            onChange={(e) => setPost({ ...post, prompt: e.target.value })}
+            value={String(post.prompt)}
+            onChange={(e) => setPost({ ...post, prompt: String(e.target.value) })}
             placeholder='Write your prompt here...'
             required
             className='form_textarea'
@@ -45,8 +45,8 @@ const Form: FC<FormProps> = ({
           </span>
 
           <input
-            value={post.tag}
-            onChange={(e) => setPost({ ...post, tag: e.target.value })}
+            value={String(post.tag)}
+            onChange={(e) => setPost({ ...post, tag: String(e.target.value) })}
             placeholder='#tag'
             required
             className='form_input'
